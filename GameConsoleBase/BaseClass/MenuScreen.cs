@@ -24,8 +24,10 @@ namespace GameConsoleBase.BaseClass
 			bool exit = false;
 			while (!exit)
 			{
+				
 				int index = 1;
-				int choose = 0;
+				int choose=0;
+				//הדפסת רישמת המסכים לבחירה
 				foreach (var item in menuItems.Keys)
 				{
 					Console.WriteLine($"{index}-{item}");
@@ -38,6 +40,7 @@ namespace GameConsoleBase.BaseClass
 					if (choose >= 1 && choose < index)
 					{
 						menuItems.ElementAt(choose - 1).Value.Show();
+						
 					}
 					else if (choose == index)
 					{
@@ -51,6 +54,8 @@ namespace GameConsoleBase.BaseClass
 
 				}
 			}
+		
+			
 		}
 			
 	}
